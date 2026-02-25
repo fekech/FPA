@@ -1,3 +1,5 @@
+import os
+
 def CMD_AuthorLogo():
     print("""
 =============================
@@ -11,3 +13,7 @@ def CMD_AuthorLogo():
       ░░▓▓▓N           @fekko
 =============================
           """)
+    
+def CMD_Clear():
+    os.system("cls")
+    CMD_AuthorLogo()
