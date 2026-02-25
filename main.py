@@ -7,4 +7,3 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')
 from FPA.Data.Scripts.cmd import CMD_AuthorLogo
 
 CMD_AuthorLogo()
-
