@@ -8,6 +8,8 @@ def ConnectionCheck(func):
             return func(*args, **kwargs)
         except ConnectionRefusedError:
             print(f'Не удалось подключиться к серверу {args[0][0]}:{args[0][1]}')
+        except OSError:
+            pass
         except Exception as e:
             print(f"Произошла неизвестная ошибка: {e}")
     return wrapper
@@ -29,7 +31,6 @@ def NT_SendData(address = ('127.0.0.1',5000),message="None"):
     client_socket.connect(address)
     client_socket.sendall(message.encode('utf-8'))
     client_socket.close()
-
 
 @ConnectionCheck
 def NT_ReadData(address = ('127.0.0.1',5000)):

@@ -1,4 +1,4 @@
-import sys , os , configparser, platform
+import sys , os , configparser, platform , configparser
 
 # Добавление родительской директории к sys
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
@@ -11,6 +11,7 @@ address = ("26.69.212.179",5000)
 silent_mode = False
 
 CMD_AuthorLogo()
+
 if NT_KeepConnection(address) == True:
     silent_mode = True
     print("Успешное подключение к серверу!")
